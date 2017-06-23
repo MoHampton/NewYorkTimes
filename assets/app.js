@@ -19,15 +19,15 @@ $(document).ready(function() {
       console.log(stuff)
       // Container for article content
       var articleContent = $("<div>")
-      articleContent.appendTo($("#test"))
+      articleContent.appendTo($(".panel-body"))
 
       // Number and title of article
       var title = $("<h2>")
-      title.html("<span id='headNum'>"+ i + "</span>" + " " + result.response.docs[i].headline.main)
+      title.html("<span id='headNum'>"+ i + "</span>" + " " + stuff.headline.main)
       title.appendTo(articleContent)
 
       var details  = $("<p>")
-      details.html("<p>Written " + stuff.byline.original + "</p><br><p>Section: " + stuff.multimedia.section_name + "</p><br><p>" + stuff.multimedia.pub_date + "</p><br><a href=" +stuff.multimedia.web_url+ ">" + stuff.multimedia.web_url + "</p>")
+      details.html("<p>Written " + stuff.byline.original + "</p><br><p>Section: " + stuff.section_name + "</p><br><p>" + stuff.pub_date + "</p><br><a href=" +stuff.web_url+ ">" + stuff.web_url + "</p>")
       details.appendTo(articleContent)
 
        i++;
