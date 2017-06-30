@@ -9,25 +9,28 @@ $(document).ready(function() {
 
   $.ajax({url: queryURL, method: "get"})
   .done( function(result) {
-    console.log(result.response.docs[2])
-
-    var stuff = result.response.docs[i]
-    console.log(stuff)
+    
     var i = 0
     while (i < records) {
-      
+
+     
+
+      var stuff = result.response.docs[i]
+      console.log(stuff)
       // Container for article content
       var articleContent = $("<div>")
-      articleContent.appendTo($("#test"))
+      articleContent.appendTo($(".panel-body"))
 
       // Number and title of article
       var title = $("<h2>")
-      title.html("<span id='headNum'>"+ i + "</span>" + "" + stuff.headline.main)
+      title.html("<span id='headNum'>"+ i + "</span>" + " " + stuff.headline.main)
       title.appendTo(articleContent)
 
       var details  = $("<p>")
-      details.html("<p>Written " + stuff.byline.original + "</p><br><p>Section: " + stuff.multimedia.section_name + "</p><br><p>" + stuff.multimedia.pub_date + "</p><br><a href=" +stuff.multimedia.web_url+ ">" + stuff.multimedia.web_url + "</p>")
+      details.html("<p>Written " + stuff.byline.original + "</p><br><p>Section: " + stuff.section_name + "</p><br><p>" + stuff.pub_date + "</p><br><a href=" +stuff.web_url+ ">" + stuff.web_url + "</p>")
       details.appendTo(articleContent)
+
+       i++;
 
     }
 
