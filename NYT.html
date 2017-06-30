@@ -7,44 +7,93 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
   </head>
+  
+
   <body>
 
-   <div class="container" align="center"> 
-   <header class="primary">
-      <img class="paperIcon">
-      <h1>New York Times Search</h1>
-    </header>
+  <div class="container"> 
+     <header class="jumbotron col-md-12">
+        <img class="paperIcon">
+        <h1>New York Times Search</h1>
+      </header>
+      
     
-    <div class="row"> <!-- Opening Row 1 -->
-      <div class="col-md-12 col-md-offset-2">
+    <!-- Opening Row 1 -->
+ 
+    <div class="row"> 
+      <div class="col-md-12">
           <div class="panel panel-primary">
-            <div class="panel-heading">
-              <img class="searchIcon">
-              <h3 class="panel-title">Search Parameters</h3>
+              <div class="panel-heading">
+                <img class="searchIcon">
+                <h3 class="panel-title">Search Parameters</h3>
               </div>
-              <div class="panel-body">
-                "Search Terms"
-                <br>
-                <a href="#" class="btn btn-default">Search</a>
-                <a href="#" class="btn btn-primary">Clear Results</a>
-    
+  <div class="panel-body">
+  <form class="form-horizontal">
+  <fieldset>
+    <div class="form-group col-md-11">
+      <label for="searchTerm" class="control-label">Search Term:</label>
+      <input type="text" class="form-control" id="inputDefault">
+    </div>
+    <br>
 
-              </div>
-            </div>
+    <div class="form-group col-md-11">
+      <label for="records" class="ontrol-label">Number of Records to Retrieve:</label>
+        <select class="form-control" id="select">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+    </div>
+    <br>
+
+    <div class="form-group col-md-11">
+      <label for="startYear" class="control-label">Start Year (Optional):</label>
+          <input type="text" class="form-control" id="inputDefault">
+    </div>
+    <br>
+
+    <div class="form-group col-md-11">
+      <label for="endYear" class="control-label">End Year (Optional):</label>
+          <input type="text" class="form-control" id="inputDefault">
+    </div>
+    <br>
+
+    <div class="form-group col-md-11">
+        <button type="reset" class="btn btn-default">Search</button>
+        <button type="submit" class="btn btn-primary">Clear Results</button>
+    </div>
+  
+  </fieldset>
+</form>
+</div>
+          </div>
+      </div>
+  </div>
+
+
+
 <br>
-             <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Top Articles</h3>
+  
+          <div class="row"> 
+          <div class="col-md-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Top Articles</h3>
               </div>
               <div class="panel-body">
                 "Articles Go Here"
               </div>
             </div>
-      
+          </div> 
+          </div>
+
+</div>      
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
     <script src="assets/app.js"></script>
     </body>
-<html>
+</html>
